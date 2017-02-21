@@ -6,3 +6,8 @@ The example quest uses the "Floran Arena" dungeon as a mission. The npc giving t
 ### Improvements Needed/Problems found
  * Doesn't pull from a list of dungeons - a new questtemplate is needed for each mission
  * Doesn't hook into the generated quest chains - need version that can provide materials for other quests
+ 
+## Fetch Quests
+This example creates a 'blacksmith themed' set of items that the npc will request the player to fetch. The example template draws from fetechSmithy.config - which is listed as fetchSmithy in the pools list.
+### Improvements Needed/Problems found
+ * Nothing yet! *fingers crossed*
