@@ -1,0 +1,71 @@
+{
+  "id" : "solofetch.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "smithItemSet" : {
+      "type" : "itemList",
+      "example" : {
+        "items" : [
+          {"name" : "banana", "count" : 3},
+          {"name" : "teleportercore", "count" : 1}
+        ]
+      }
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/generated/fetch.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver"
+    },
+    "generatedText" : {
+      "title" : [
+        "<questGiver>'s Fetch Quest",
+        "Fetching for <questGiver>"
+      ],
+      "text" : {
+        "default" : {
+          "floran" : [
+            "Time to ^green;find ^orange;<smithItemSet>. ^white;It'sss very important we do this.",
+            "As your next tasssk, could you ^green;find us ^orange;<smithItemSet>? ^white;Not too big a job for someone sskillful like you."
+          ],
+          "glitch" : [
+            "Confident. Next ^green;we'll need ^orange;<smithItemSet>.^white; I'm sure that's well within your capabilities.",
+            "Eager. Next, ^green;I need you to collect ^orange;<smithItemSet>^white;."
+          ],
+          "default" : [
+            "Next, ^green;we'll need ^orange;<smithItemSet>^white;. You can handle that, right?",
+            "^green;The next thing I'll need is ^orange;<smithItemSet>^white;. It's important to the plan."
+          ]
+        }
+      },
+      "completionText" : {
+        "default" : {
+          "floran" : [
+            "Perfect, time to put our <smithItemSet> to ussse.",
+            "That was quicker than Floran expected! Floran very pleassed."
+          ],
+          "glitch" : [
+            "Appreciative. I'm so pleased that you managed to gather these for me, they're essential for my plan. Thank you!",
+            "Exuberant. Thank you for getting these for me, I have plans for them!"
+          ],
+          "default" : [
+            "Thank you, this is exactly what I need for the next stage of my plan...",
+            "Perfect, this will work nicely. Thank you!"
+          ]
+        }
+      }
+    },
+    "fetchList" : "smithItemSet",
+    "portraitParameter" : "questGiver",
+    "requireTurnIn" : true
+  }
+}

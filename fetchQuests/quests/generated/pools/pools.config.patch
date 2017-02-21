@@ -1,0 +1,11 @@
+[
+	{
+	"op" : "add",
+	"path" : "/fetchSmithy",
+	"value": {
+    "relation" : "UnaryPool",
+    "type" : "ItemList",
+    "poolFile" : "/quests/generated/pools/fetchSmithy.config"
+	}
+  }
+]
