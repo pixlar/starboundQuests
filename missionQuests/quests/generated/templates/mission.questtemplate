@@ -1,0 +1,112 @@
+{
+  "id" : "mission.generated",
+  "moneyRange" : [10, 400],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    }
+  },
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/generated/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver"
+    },
+	
+    "generatedText" : {
+	   "title" : {
+        "default" : [
+          "A Challenger Approaches",
+          "Challenging the Arena"
+        ]
+      },
+	  "goalText" : {
+        "default" : [
+          "^cyan;Clear the arena!"
+        ],
+        "floran" : [
+          "^cyan;Clear the arena!"
+        ],
+        "glitch" : [
+          "^cyan;Clear the arena!"
+
+        ]
+      },
+	  "text" : {
+        "default" : {
+          "default" : [
+            "Hey, champion! A guy invited me to a ^orange;gladiator arena tournament^white;, but I think you should go instead. If you're feeling tough, ^green;talk to me and I can send you there for the first round^white;!"
+          ],
+          "floran" : [
+            "Hey, champion! A guy invited me to a ^orange;gladiator arena tournament^white;, but I think you should go instead. If you're feeling tough, ^green;talk to me and I can send you there for the first round^white;!"
+          ],
+          "glitch" : [
+            "Hey, champion! A guy invited me to a ^orange;gladiator arena tournament^white;, but I think you should go instead. If you're feeling tough, ^green;talk to me and I can send you there for the first round^white;!"
+          ]
+        }
+      },
+	  "completionText" : {
+        "default" : {
+          "default" : [
+            "You ssurvived! Knew you'd make it. Good job, champ!"
+          ],
+          "floran" : [
+            "You ssurvived! Knew you'd make it. Good job, champ!"
+          ],
+          "glitch" : [
+            "You ssurvived! Knew you'd make it. Good job, champ!"
+          ]
+        }
+      },
+	  "failureText" : {
+        "default" : [
+          "I guess I wasn't able to help <questGiver>. I'm sure someone else will clear the arena."
+        ]
+      }
+	},
+    "objectives" : [
+      {
+        "id" : "enterInstance",
+        "text" : "Return to ^orange;<questGiver>^reset;"
+      },
+      {
+        "id" : "findGoal",
+        "text" : "Talk to ^orange;<questGiver>^reset; to travel to the ^orange;arena^reset;"
+      },
+      {
+        "id" : "turnIn",
+        "text" : "Win the arena battle"
+      }
+    ],
+
+    "warpAction" : "instanceworld:arena1",
+    "warpDialog" : {
+		"paneLayout" : "/interface/windowconfig/portraitconfirmation.config:paneLayout",
+		"icon" : "/interface/warping/icon.png",
+		"title" : "Teleport Confirmation",
+		"subtitle" : "Random Mission",
+		"message" : "\n\nAre you sure you're ready to begin the mission? Once inside the only escape is victory.",
+		"okCaption" : "Ready",
+		"cancelCaption" : "Not now",
+		"images" : {
+		  "portrait" : [
+		  ]
+		},
+		"labels" : {
+		  "name" : "Questgiver"
+		}
+	},
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "arena1teleporter",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false
+  }
+}
