@@ -38,14 +38,7 @@
       // questmanager stagehands nearby, within a <nearbyQuestRange> tile range.
       "nearbyQuestLimit" : 10,
       "nearbyQuestRange" : 5,
-      "questCountRange" : [1, 11],
-      
-      "graduation" : {
-        "nextNpcType" : [
-          [1, "crewmemberengineer"],
-          [1, "crewmembermechanic"]
-        ]
-      }
+      "questCountRange" : [1, 11]
     },
 
     "reactions" : {
